@@ -15,6 +15,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:background="@color/colorWhite"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/buttonNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="22sp"
+            android:text="@string/textNext"
+            android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textViewNumber"
+            tools:text="@string/textNext" />
+
         <TextView
             android:id="@+id/textViewNumber"
             android:layout_width="wrap_content"
@@ -22,7 +39,7 @@
             android:textSize="150sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonNext"
             app:layout_constraintBottom_toTopOf="@id/textViewMessage"
             tools:text="@string/toolsText_textViewNumber"
             android:text="@{String.valueOf(question.mainNumber)}"/>

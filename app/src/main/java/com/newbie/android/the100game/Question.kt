@@ -15,27 +15,11 @@ class Question {
         }
     }
 
-    /*
-    private fun generateAnswers(): List<Int> {
-        val answers = mutableListOf<Int>()
-
-        for (i in 0..3) {
-            if (i == correctButton)
-                answers[i] = correctAnswer
-            else
-                answers[i] = generateIncorrectAnswer()
-        }
-
-        return answers
-    }
-     */
-
     private fun generateIncorrectAnswer(): Int {
         var answer = randomNumber(100)
 
-        while (answer == correctAnswer) {
+        while (answer == correctAnswer)
             answer = randomNumber(100)
-        }
 
         return answer
     }
