@@ -1,9 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textViewNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="150sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textViewMessage"
+            tools:text="@string/toolsText_textViewNumber" />
+
+        <TextView
+            android:id="@+id/textViewMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewNumber"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutContainer"
+            tools:text="@string/toolsText_textViewMessage" />
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:id="@+id/linearLayoutContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewMessage"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:id="@+id/buttonAnswer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:paddingHorizontal="10dp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorBlack"
+                android:textSize="30sp"
+                tools:text="@string/toolsText_textViewNumber" />
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:id="@+id/buttonAnswer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:paddingHorizontal="10dp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorBlack"
+                android:textSize="30sp"
+                tools:text="@string/toolsText_textViewNumber" />
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:id="@+id/buttonAnswer3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:paddingHorizontal="10dp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorBlack"
+                android:textSize="30sp"
+                tools:text="@string/toolsText_textViewNumber" />
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:id="@+id/buttonAnswer4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:paddingHorizontal="10dp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorBlack"
+                android:textSize="30sp"
+                tools:text="@string/toolsText_textViewNumber" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
