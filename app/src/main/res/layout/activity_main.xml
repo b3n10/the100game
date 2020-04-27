@@ -58,7 +58,8 @@
                 android:background="@color/colorWhite"
                 android:textColor="@color/colorBlack"
                 android:textSize="30sp"
-                tools:text="@string/toolsText_textViewNumber" />
+                tools:text="@string/toolsText_textViewNumber"
+                android:text="@{String.valueOf(question.correctButton)}"/>
 
             <Button
                 style="?android:attr/buttonBarButtonStyle"
